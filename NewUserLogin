@@ -1,0 +1,29 @@
+#This is the colors script
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+#Here is the main script:
+
+print(bcolors.UNDERLINE + "new user login" + bcolors.ENDC)
+print('\n')
+first_name = input("First name? \n")
+print(bcolors.OKBLUE + "Hello", first_name + bcolors.ENDC)
+last_name = input("What is your last name? \n")
+print(bcolors.OKBLUE + "Hey", first_name, last_name + bcolors.ENDC)
+pwd = input("Now we will set up your secret password.\nPlease type your password:\n")
+rpt_pwd = input("That's great!\nPlease type your password again:\n")
+if(pwd==rpt_pwd):
+    st = (bcolors.WARNING + "You are The best!\nWELCOME!" + bcolors.ENDC)
+    print(st)
+else:
+    st = (bcolors.FAIL + "WRONG!\nTry again!" + bcolors.ENDC)
+    print(st)

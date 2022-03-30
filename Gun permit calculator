@@ -1,0 +1,96 @@
+print('Can you get a gun?\n\n')
+
+# users name - only a-z letters allowd, if user use numbers so he goes in a while loop until name.isalpha() == True
+first_name = input("What is your first name? \n")
+
+while first_name.isalpha() == False:
+    st = ('Only letters are allowed!')
+    print(st)
+    first_name = input('Try again\nWhat is your fisrt name? (Only a-z this time)\n')
+else:
+    print("Hello", first_name)
+
+last_name = input("What is your last name? \n")
+
+while last_name.isalpha() == False:
+    st = ('Only letters are allowed!')
+    print(st)
+    last_name = input('Try again\nWhat is your last name? (Only a-z this time)\n')
+else:
+    print("Hello", first_name, last_name)
+
+
+
+# Here Ill chack the age of the user - if under 21, he cant have a gun.
+age = int(input('\nHow old are you?\n'))
+
+while age <= int('20'):
+     print('You are too young!')
+     age = int(input('\nHow old are you?\n'))
+if age == int('21'):
+     print('You are at the perfect age!')
+else:
+    print('OK lets continue:\n')
+
+
+
+# I am importing a library called 'random' and selecting the 'randint' function which chooses a random number:
+from random import randint
+
+my_random_number = randint(0,100)
+
+# asking the user to repeat the random number:
+
+print('\nTo chack if you are smart, type the number you see on the screen: \n', my_random_number)
+usrsmart = input('The number on the screen is:\n')
+if int(usrsmart)==int(my_random_number):
+    print('Oh god you are good!\n\n')
+else:
+    print("Stupid people can't have a gun")
+    usrsmart = input('The number on the screen is:\n')
+
+
+
+# Chack if the user lives in israel:
+print("Please select the number of the country you live in:\n")
+
+# creat a dictionary of keys and countries:
+location = ['Egypt', 'Iran', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon']
+locnum = range(1,7)
+zip_dict = zip(locnum, location)
+locdict = dict(zip_dict)
+
+
+for a,b in zip(locnum, location):
+    print(a,b)
+
+'\n\n'
+import sys
+selected_loc = int(input('My selection is:\n'))
+
+while selected_loc != 4:
+    print("You won't have a gun here!")
+    selected_loc = int(input('My selection is:\n'))
+if selected_loc == 4:
+    print("Sabbaba!\n")
+
+
+
+
+# Now ill chack if the user loves Israel:
+
+usrlove = input("Do you love Israel and agree that Israel is the country of the Jewish people?\nPlease type 'Y' for yes\nType 'N' for no:\n")
+while usrlove.isalpha() == False:
+    st = ('Only letters are allowed!')
+    print(st)
+    usrlove = input("Do you love Israel and agree that Israel is the country of the Jewish people?\nPlease type 'Y' for yes.\nType 'N' for no:\n")
+
+
+if usrlove == 'N':
+    print("You are not welcome here!")
+if usrlove == 'Y':
+    print(first_name + ", you are one of the good guys!")
+
+print("Practice a lot and keep us all safe with your new gun!")
+
+
